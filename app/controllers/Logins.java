@@ -3,6 +3,7 @@ package controllers;
 import javax.servlet.http.HttpSession;
 
 import models.Cliente;
+import models.FrenteDeCaixa;
 import play.mvc.Controller;
 
 public class Logins extends Controller{
@@ -33,7 +34,11 @@ public class Logins extends Controller{
 		}
 		else if(login.equals("admin@123") && senha.equals("admin")) {
 			session.put("idClienteLogado", usuario.id);
+			
+			FrenteDeCaixa frenteDeCaixa = new FrenteDeCaixa();
+			frenteDeCaixa.save();
 			Operadores.operador(); 
+			
 		}
 		else{
 			session.put("idClienteLogado", usuario.id);

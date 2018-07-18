@@ -2,8 +2,6 @@ package controllers;
 
 import play.mvc.Controller;
 
-public class CompraRefeicao extends Controller{
-	
-	
+public class FrenteDeCaixas extends Controller{
 
 }

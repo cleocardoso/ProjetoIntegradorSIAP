@@ -31,7 +31,7 @@ public class Contas extends Controller {
         Operadores.operador();
 	}
 	
-	public static void salvar(Conta conta) {
+	public static void salvarRecarga(Conta conta) {
 				
 		conta.saldo += conta.recarga;
 		conta.save();
